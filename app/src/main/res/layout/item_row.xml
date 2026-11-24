@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 1 dòng danh sách dùng chung (giỏ hàng, đơn hàng, món trong đơn, mã giảm giá):
+     ô hình bên trái (ảnh món hoặc icon), tiêu đề, dòng phụ, giá, bộ tăng/giảm số lượng, nút xóa -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="?attr/colorSurfaceContainerLow"
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <FrameLayout
+            android:id="@+id/iconBox"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_food">
+
+            <ImageView
+                android:id="@+id/imgIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:padding="14dp"
+                android:visibility="gone"
+                app:tint="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/imgRowFood"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvRowTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textAppearance="?attr/textAppearanceTitleSmall"
+                android:textColor="?attr/colorOnSurface"
+                tools:text="Phở bò tái chín" />
+
+            <TextView
+                android:id="@+id/tvRowSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="@style/TextAppearance.App.Label"
+                tools:text="50.000 ₫ / phần" />
+
+            <TextView
+                android:id="@+id/tvRowPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:textColor="@color/price"
+                tools:text="100.000 ₫" />
+
+            <!-- Nút hành động nhỏ (ví dụ Đánh giá ở chi tiết đơn đã giao) -->
+            <Button
+                android:id="@+id/btnRowAction"
+                style="@style/Widget.App.Button.Tonal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:visibility="gone"
+                app:icon="@drawable/ic_star" />
+
+            <!-- Tăng / giảm số lượng (chỉ hiện ở giỏ hàng) -->
+            <LinearLayout
+                android:id="@+id/qtyBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <Button
+                    android:id="@+id/btnMinus"
+                    style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/cd_decrease"
+                    app:icon="@drawable/ic_remove" />
+
+                <TextView
+                    android:id="@+id/tvQty"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorOnSurface"
+                    tools:text="2" />
+
+                <Button
+                    android:id="@+id/btnPlus"
+                    style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/cd_increase"
+                    app:icon="@drawable/ic_add" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnRowDelete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cd_delete"
+            android:padding="12dp"
+            android:src="@drawable/ic_delete"
+            app:tint="?attr/colorError" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

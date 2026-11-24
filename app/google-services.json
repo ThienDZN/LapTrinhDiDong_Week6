@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "778721168231",
+    "project_id": "laptrinhdidong-34e42",
+    "storage_bucket": "laptrinhdidong-34e42.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778721168231:android:4e20c67541546721dabdc2",
+        "android_client_info": {
+          "package_name": "com.example.thien"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDocf2F7v8q4ipX8pwSnKOHYMZ7FSQgr7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

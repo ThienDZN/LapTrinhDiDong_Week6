@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Trang QUÁN: ảnh bìa + tên, đánh giá, khoảng cách, giờ mở cửa, địa chỉ; thực đơn của quán (lưới món);
+     thanh dưới "Xem giỏ hàng" khi giỏ có món -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/shopHeader"
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <ImageView
+                    android:id="@+id/imgShop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_scrim" />
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/cd_back"
+                    android:src="@drawable/ic_arrow_back"
+                    app:tint="#FFFFFF" />
+            </FrameLayout>
+
+            <!-- Thông tin quán -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="14dp">
+
+                <TextView
+                    android:id="@+id/tvShopName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textStyle="bold"
+                    tools:text="Cơm Tấm Bụi Đêm" />
+
+                <TextView
+                    android:id="@+id/tvShopTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    tools:text="Cơm tấm · Cơm chiên" />
+
+                <TextView
+                    android:id="@+id/tvShopRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="@color/md_secondary"
+                    android:textStyle="bold"
+                    tools:text="★ 4.7 (1,2k đánh giá)" />
+
+                <com.google.android.material.card.MaterialCardView style="@style/FormCard">
+
+                    <LinearLayout
+                        android:id="@+id/shopInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView style="@style/DetailSection" android:text="@string/shop_menu" />
+            </LinearLayout>
+
+            <!-- Thực đơn của quán -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFoods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="4dp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_food" />
+
+            <!-- Nhận xét về quán: tiêu đề + nút viết nhận xét + danh sách -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tvShopReviewsTitle"
+                    style="@style/DetailSection"
+                    tools:text="Nhận xét về quán · 3" />
+
+                <Button
+                    android:id="@+id/btnWriteShopReview"
+                    style="@style/Widget.App.Button.Outlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/btn_write_shop_review"
+                    app:icon="@drawable/ic_rate_review" />
+
+                <LinearLayout
+                    android:id="@+id/shopReviewList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Thanh dưới: xem giỏ hàng (chỉ hiện khi giỏ có món) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cartBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:cardBackgroundColor="?attr/colorSurfaceContainer"
+        app:shapeAppearance="@style/ShapeAppearance.App.BottomBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvCartInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="@color/price"
+                android:textStyle="bold"
+                tools:text="3 phần · 135.000 ₫" />
+
+            <Button
+                android:id="@+id/btnViewCart"
+                style="@style/Widget.App.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:text="@string/view_cart" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

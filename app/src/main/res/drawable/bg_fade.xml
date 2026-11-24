@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Lớp phủ ảnh nền đầu trang: hơi tối ở trên (để chữ thanh công cụ đọc được), trong ở giữa, rồi đậm dần
+     thành đúng màu nền app ở dưới cùng -> ảnh "tan" mượt vào nền đen -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient android:angle="270" android:startColor="#66000000" android:centerColor="#33000000"
+        android:centerY="0.35" android:endColor="@color/md_surface" />
+</shape>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hộp thoại viết / sửa đánh giá -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="8dp">
+
+    <!-- Chấm sao: bấm hoặc vuốt; sao rỗng màu xám sáng để nhìn rõ trên nền tối -->
+    <RatingBar
+        android:id="@+id/rbInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:progressBackgroundTint="#66FFFFFF"
+        android:progressTint="#FFB300"
+        android:rating="0"
+        android:secondaryProgressTint="#66FFFFFF"
+        android:stepSize="1" />
+
+    <TextView
+        android:id="@+id/tvStarLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/star_hint"
+        android:textAppearance="?attr/textAppearanceTitleSmall"
+        android:textColor="@color/price" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/hint_review"
+        app:counterEnabled="true"
+        app:counterMaxLength="500">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLength="500"
+            android:minLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

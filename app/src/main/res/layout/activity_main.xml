@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Màn hình THỰC ĐƠN (Home):
+     - phần đầu: ảnh Sài Gòn về đêm tràn từ mép trên (sau cả thanh trạng thái), mờ dần sang đen tới ô tìm kiếm;
+       trên ảnh là thanh công cụ (sắp xếp, giỏ hàng, cài đặt), lời chào và giờ mở cửa
+     - bên dưới: tìm kiếm, lọc danh mục, lưới món; cuối màn hình là thanh điều hướng.
+     NestedScrollView: kéo tay lẫn lăn chuột đều cuộn được. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Phần đầu có ảnh nền: ảnh + lớp phủ cao đúng bằng phần chữ (alignTop / alignBottom theo @id/header) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_alignTop="@+id/header"
+                    android:layout_alignBottom="@+id/header"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_city" />
+
+                <!-- Lớp phủ: trong suốt ở trên, đậm dần thành màu nền ở dưới (ảnh "tan" vào nền đen) -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_alignTop="@+id/header"
+                    android:layout_alignBottom="@+id/header"
+                    android:background="@drawable/bg_fade" />
+
+                <LinearLayout
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="40dp">
+
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:minHeight="?attr/actionBarSize"
+                        app:menu="@menu/menu_home"
+                        app:title="@string/app_name"
+                        app:titleTextColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/tvWelcome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="70dp"
+                        android:shadowColor="#CC000000"
+                        android:shadowRadius="8"
+                        android:textAppearance="?attr/textAppearanceBodyLarge"
+                        android:textColor="#EEFFFFFF"
+                        tools:text="Chào cú đêm, admin 🌙" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:shadowColor="#CC000000"
+                        android:shadowRadius="10"
+                        android:text="@string/home_title"
+                        android:textAppearance="?attr/textAppearanceHeadlineMedium"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <!-- Giờ mở cửa + ưu đãi: bấm để xem giới thiệu ứng dụng -->
+                    <LinearLayout
+                        android:id="@+id/hero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:shadowColor="#CC000000"
+                            android:shadowRadius="8"
+                            android:text="@string/hero_title"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/price"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:shadowColor="#CC000000"
+                            android:shadowRadius="8"
+                            android:text="@string/hero_sub"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="#E6FFFFFF" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/hero_more"
+                            android:textAppearance="?attr/textAppearanceLabelLarge"
+                            android:textColor="@color/md_secondary"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- Phần dưới: khu vực giao, tìm kiếm, danh mục, gợi ý quán, danh sách quán -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-8dp"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <!-- Khu vực nhận hàng: bấm để đổi (app tìm quán quanh khu vực này) -->
+                <TextView
+                    android:id="@+id/rowArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/bg_price_chip"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:minHeight="48dp"
+                    android:paddingHorizontal="16dp"
+                    android:textAppearance="?attr/textAppearanceTitleSmall"
+                    android:textColor="?attr/colorOnSurface"
+                    app:drawableEndCompat="@drawable/ic_chevron_right"
+                    app:drawableStartCompat="@drawable/ic_location"
+                    app:drawableTint="@color/price"
+                    tools:text="Giao đến: Quận 1" />
+
+                <!-- Ô tìm kiếm -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.App.SearchField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="12dp"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_search">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_search"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Lọc theo danh mục món: các chip được thêm trong code -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingHorizontal="16dp"
+                    android:scrollbars="none">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipCategories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:selectionRequired="true"
+                        app:singleLine="true"
+                        app:singleSelection="true" />
+                </HorizontalScrollView>
+
+                <!-- Dòng giỏ hàng: bấm để mở giỏ -->
+                <TextView
+                    android:id="@+id/tvCartSub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_price_chip"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="10dp"
+                    android:textAppearance="?attr/textAppearanceLabelLarge"
+                    android:textColor="@color/price"
+                    android:visibility="gone"
+                    tools:text="Giỏ hàng: 2 phần · 164.000 ₫"
+                    tools:visibility="visible" />
+
+                <!-- Gợi ý cho bạn: quán điểm cao và gần (cuộn ngang) -->
+                <TextView
+                    android:id="@+id/tvSuggestTitle"
+                    style="@style/DetailSection"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="@string/suggest_title" />
+
+                <TextView
+                    android:id="@+id/tvSuggestSub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="@string/suggest_sub"
+                    android:textAppearance="@style/TextAppearance.App.Label" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSuggest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    tools:listitem="@layout/item_shop_card" />
+
+                <!-- Danh sách quán: tên mục + nút sắp xếp -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNearbyTitle"
+                        style="@style/DetailSection"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/nearby_title" />
+
+                    <TextView
+                        android:id="@+id/tvSort"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:padding="6dp"
+                        android:textAppearance="?attr/textAppearanceLabelLarge"
+                        android:textColor="?attr/colorPrimary"
+                        app:drawableStartCompat="@drawable/ic_sort"
+                        app:drawableTint="?attr/colorPrimary"
+                        tools:text="Gợi ý" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvShops"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/item_shop_row" />
+
+                <TextView
+                    android:id="@+id/tvEmpty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="24dp"
+                    android:text="@string/shops_empty"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Thanh điều hướng dưới: các mục hay dùng, bấm 1 chạm -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_bottom" />
+</LinearLayout>

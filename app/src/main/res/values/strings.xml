@@ -1,0 +1,296 @@
+<resources>
+    <string name="app_name">Midnight Bites</string>
+
+    <!-- Đăng nhập / Đăng ký -->
+    <string name="login_title">Đăng nhập</string>
+    <string name="login_subtitle">Tìm quán ngon gần bạn · giao đêm khuya 20:00 – 04:00</string>
+    <string name="hint_username">Tên đăng nhập</string>
+    <string name="hint_password">Mật khẩu</string>
+    <string name="btn_login">ĐĂNG NHẬP</string>
+    <string name="login_hint_demo">Tài khoản test: admin / 123456 (quản trị) · user / 123456 (khách hàng)</string>
+    <string name="register_title">Đăng ký</string>
+    <string name="register_headline">Tạo tài khoản mới</string>
+    <string name="register_subtitle">Đăng ký để đặt món và lưu lịch sử đơn hàng</string>
+    <string name="hint_fullname">Họ và tên</string>
+    <string name="hint_confirm">Nhập lại mật khẩu</string>
+    <string name="btn_register">ĐĂNG KÝ</string>
+    <string name="no_account">Chưa có tài khoản? Đăng ký</string>
+    <string name="have_account">Đã có tài khoản? Đăng nhập</string>
+    <string name="register_success">Đăng ký thành công, hãy đăng nhập</string>
+    <string name="err_fullname">Vui lòng nhập họ tên</string>
+    <string name="err_username_short">Tên đăng nhập tối thiểu 3 ký tự</string>
+    <string name="err_password_short">Mật khẩu tối thiểu 6 ký tự</string>
+    <string name="err_confirm">Mật khẩu nhập lại không khớp</string>
+    <string name="err_username_taken">Tên đăng nhập đã tồn tại</string>
+
+    <!-- Home -->
+    <string name="welcome_user">Chào cú đêm, %1$s</string>
+    <string name="home_title">Khuya rồi, ăn gì nào?</string>
+    <string name="hero_title">Quán ngon gần bạn, giao đêm khuya</string>
+    <string name="hero_sub">Chọn khu vực, app gợi ý quán đánh giá cao trong khu vực · Miễn phí giao đơn từ 200.000 ₫ · Mã DEMKHUYA giảm 10%</string>
+    <string name="hero_more">Giới thiệu ứng dụng ›</string>
+    <string name="hint_search">Tìm quán hoặc món: phở, gà nướng, trà sữa…</string>
+    <string name="filter_all">Tất cả</string>
+    <string name="cart_count">Giỏ hàng: %1$d phần · %2$s</string>
+    <string name="food_sub">%1$s · Đã bán %2$d</string>
+    <string name="rating_new">Món mới</string>
+    <string name="cd_back">Quay lại</string>
+    <string name="cd_edit">Chỉnh sửa</string>
+    <string name="cd_delete">Xóa</string>
+    <string name="cd_add_cart">Thêm vào giỏ</string>
+    <string name="cd_decrease">Giảm số lượng</string>
+    <string name="cd_increase">Tăng số lượng</string>
+
+    <!-- Drawer -->
+    <string name="tab_menu">Khám phá</string>
+    <string name="tab_favorites">Đã thích</string>
+    <string name="tab_cart">Giỏ hàng</string>
+    <string name="tab_account">Tài khoản</string>
+    <string name="sort_title">Sắp xếp quán</string>
+    <string name="nav_favorites">Món đã thích</string>
+    <string name="nav_orders">Lịch sử đơn hàng</string>
+    <string name="nav_profile">Thông tin cá nhân</string>
+    <string name="nav_admin">Quản lý mã giảm giá</string>
+    <string name="nav_about">Giới thiệu ứng dụng</string>
+    <string name="btn_open_calculator">Máy tính</string>
+    <string name="btn_open_hello">Hello</string>
+    <string name="btn_logout">Đăng xuất</string>
+    <string name="member">Khách hàng</string>
+    <string name="role_admin">Quản trị viên</string>
+    <string name="about_title">Về Midnight Bites</string>
+    <string name="about_text">Midnight Bites là nền tảng PHÂN PHỐI đồ ăn khuya (kiểu ShopeeFood): app không tự nấu mà kết nối bạn với các quán đối tác, quán chuẩn bị món và shipper giao tới tận nơi. Quán và dữ liệu trong app là mô phỏng cho đồ án.\n\n• Chọn khu vực nhận hàng (9 khu vực), mỗi khu vực có các quán riêng; app GỢI Ý quán ngon, đánh giá cao trong khu vực đó.\n• Hoặc tự chọn quán: tìm theo tên quán / món, lọc theo loại món, sắp xếp theo gần nhất, đánh giá cao, giao nhanh.\n• Mỗi đơn đặt từ 1 quán; phí giao tính theo khoảng cách, miễn phí cho đơn từ 200.000 ₫.\n• Thích, chấm sao, bình luận từng món; viết nhận xét cho từng quán, điểm sao của quán cập nhật theo nhận xét thật của khách.\n• Giỏ hàng, thanh toán, mã giảm giá (admin tạo), theo dõi trạng thái giao, hủy đơn khi quán còn chuẩn bị, trả hàng / hoàn tiền trong 3 ngày.\n• Lịch sử đơn gắn với tài khoản, đăng xuất / đăng nhập lại hay đổi máy vẫn còn; dữ liệu lưu trên Firebase Firestore.\n• Nhạc nền \"Đêm Thành Phố\" (Lope Dope) phát khi mở app, dừng khi đóng app; chỉnh âm lượng trong Cài đặt.\n\nẢnh nền do nhóm cung cấp (đã chỉnh màu cam – đen). Ảnh món ăn: Wikimedia Commons, nguồn ghi ở từng món.\n\nĐồ án môn Lập trình di động.</string>
+    <string name="ok">OK</string>
+
+    <!-- Chi tiết món -->
+    <string name="food_stats">Đã bán %1$s · %2$s · %3$s</string>
+    <string name="rating_short">★ %1$.1f (%2$d)</string>
+    <string name="rating_none">Chưa có đánh giá</string>
+    <string name="photo_credit">Ảnh: %1$s</string>
+    <string name="label_category">Danh mục</string>
+    <string name="label_calories">Năng lượng</string>
+    <string name="label_prep">Thời gian chuẩn bị</string>
+    <string name="label_spicy">Độ cay</string>
+    <string name="calories_value">%1$d kcal</string>
+    <string name="prep_value">%1$d phút</string>
+    <string name="spicy_none">Không cay</string>
+    <string name="btn_add_qty">Thêm %1$d · %2$s</string>
+    <string name="added_to_cart">Đã thêm %1$d × %2$s vào giỏ</string>
+    <string name="max_qty">Tối đa %1$d phần mỗi món</string>
+    <string name="favorite_added">Đã thêm vào món yêu thích</string>
+    <string name="favorite_removed">Đã bỏ thích</string>
+    <string name="share">Chia sẻ</string>
+    <string name="share_text">Ăn khuya món \"%1$s\" ở Midnight Bites nè</string>
+    <string name="reviews_title">Đánh giá · %1$d</string>
+    <string name="reviews_title_rating">Đánh giá · %1$d · ★ %2$.1f</string>
+    <string name="btn_write_review">Viết đánh giá</string>
+    <string name="btn_review">Đánh giá món</string>
+    <string name="btn_review_edit">Sửa đánh giá · %1$d★</string>
+    <string name="review_dialog_title">Đánh giá %1$s</string>
+    <string name="hint_review">Món này thế nào?</string>
+    <string name="star_hint">Chạm vào sao để chấm điểm</string>
+    <string name="err_rating">Vui lòng chọn số sao</string>
+    <string name="err_review_short">Bình luận tối thiểu 10 ký tự</string>
+    <string name="review_saved">Cảm ơn bạn đã đánh giá!</string>
+    <string name="btn_delete">Xóa</string>
+    <string name="btn_save">Lưu</string>
+    <string name="btn_cancel">Hủy</string>
+    <string name="you">(Bạn)</string>
+
+    <!-- Giỏ hàng -->
+    <string name="cart_title">Giỏ hàng</string>
+    <string name="cart_empty">Giỏ hàng đang trống</string>
+    <string name="label_total">Tổng tiền</string>
+    <string name="btn_checkout">ĐẶT MÓN</string>
+    <string name="unit_price">%1$s / phần</string>
+
+    <!-- Thanh toán -->
+    <string name="checkout_title">Thanh toán</string>
+    <string name="section_receiver">Giao đến</string>
+    <string name="section_payment">Phương thức thanh toán</string>
+    <string name="section_voucher">Mã giảm giá</string>
+    <string name="section_note">Ghi chú cho quán</string>
+    <string name="section_summary">Đơn hàng</string>
+    <string name="hint_phone">Số điện thoại</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_address">Địa chỉ giao (số nhà, đường, phường)</string>
+    <string name="hint_voucher">Nhập mã giảm giá (thử DEMKHUYA)</string>
+    <string name="hint_note">Ví dụ: ít cay, không hành, gọi trước khi tới…</string>
+    <string name="pay_cod">Tiền mặt khi nhận hàng</string>
+    <string name="pay_wallet">Ví điện tử</string>
+    <string name="pay_card">Thẻ ngân hàng</string>
+    <string name="label_subtotal">Tạm tính</string>
+    <string name="label_shipping">Phí giao hàng</string>
+    <string name="label_discount">Giảm giá</string>
+    <string name="label_grand_total">Tổng cộng</string>
+    <string name="free">Miễn phí</string>
+    <string name="agree_terms">Tôi xác nhận thông tin giao hàng là chính xác</string>
+    <string name="btn_pay">ĐẶT MÓN</string>
+    <string name="item_line">%1$d × %2$s</string>
+    <string name="err_phone">Số điện thoại gồm 10 số, bắt đầu bằng 0</string>
+    <string name="err_address">Địa chỉ tối thiểu 10 ký tự</string>
+    <string name="err_email">Email không hợp lệ</string>
+    <string name="err_voucher">Mã giảm giá không tồn tại</string>
+    <string name="err_voucher_off">Mã này đang tạm ngưng</string>
+    <string name="err_voucher_expired">Mã này đã hết hạn</string>
+    <string name="err_voucher_min">Mã chỉ dùng cho đơn từ %1$s</string>
+    <string name="err_agree">Vui lòng xác nhận thông tin giao hàng</string>
+    <string name="voucher_applied">Áp dụng mã %1$s: giảm %2$s</string>
+    <string name="order_success_title">Đặt món thành công</string>
+    <string name="order_success_msg">Mã đơn %1$s · %2$s\nQuán đang chuẩn bị, dự kiến giao trong 30 phút.</string>
+    <string name="error_network">Không kết nối được máy chủ, thử lại sau</string>
+
+    <!-- Lịch sử đơn -->
+    <string name="orders_empty">Bạn chưa có đơn hàng nào</string>
+    <string name="loading">Đang tải…</string>
+    <string name="order_title">Đơn %1$s</string>
+    <string name="order_sub">%1$s · %2$d phần · %3$s</string>
+    <string name="order_detail_title">Chi tiết đơn hàng</string>
+    <string name="label_order_code">Mã đơn</string>
+    <string name="label_time">Thời gian đặt</string>
+    <string name="label_receiver">Người nhận</string>
+    <string name="label_address">Địa chỉ</string>
+    <string name="label_payment">Thanh toán</string>
+    <string name="label_voucher">Mã giảm giá</string>
+    <string name="label_note">Ghi chú</string>
+    <string name="label_items">Các món</string>
+    <string name="status_0">Quán đang chuẩn bị</string>
+    <string name="status_1">Shipper đang giao</string>
+    <string name="status_2">Đã giao thành công</string>
+    <string name="status_3">Đơn đã hủy</string>
+    <string name="btn_cancel_order">HỦY ĐƠN</string>
+    <string name="status_4">Đang xử lý trả hàng</string>
+    <string name="step_short_4">Trả hàng</string>
+    <string name="btn_return_order">TRẢ HÀNG / HOÀN TIỀN</string>
+    <string name="btn_send_return">Gửi yêu cầu</string>
+    <string name="hint_return_note">Mô tả thêm (không bắt buộc)</string>
+    <string name="err_return_reason">Vui lòng chọn lý do trả hàng</string>
+    <string name="return_sent">Đã gửi yêu cầu. Quán sẽ liên hệ trong 24 giờ để hoàn tiền.</string>
+    <string name="label_return_time">Yêu cầu trả hàng lúc</string>
+    <string name="label_return_reason">Lý do trả hàng</string>
+    <string name="label_return_note">Mô tả thêm</string>
+    <string name="cancel_order_confirm">Bạn chắc chắn muốn hủy đơn %1$s? Quán sẽ ngừng chuẩn bị món.</string>
+    <string name="btn_keep">Giữ đơn</string>
+    <string name="order_cancelled">Đã hủy đơn hàng</string>
+    <string name="status_steps">Chuẩn bị  →  Đang giao  →  Đã giao</string>
+    <string name="btn_reorder">ĐẶT LẠI ĐƠN NÀY</string>
+    <string name="reordered">Đã thêm các món vào giỏ</string>
+
+    <!-- Yêu thích -->
+    <string name="favorites_empty">Chưa thích món nào</string>
+
+    <!-- Admin -->
+    <string name="admin_title">Mã giảm giá</string>
+    <string name="admin_new">TẠO MÃ MỚI</string>
+    <string name="admin_count">Có %1$d mã</string>
+    <string name="admin_empty">Chưa có mã nào. Bấm TẠO MÃ MỚI để thêm.</string>
+    <string name="voucher_percent">Giảm %1$d%%</string>
+    <string name="voucher_max">tối đa %1$s</string>
+    <string name="voucher_min">đơn từ %1$s</string>
+    <string name="voucher_expiry">HSD %1$s</string>
+    <string name="voucher_expired">Hết hạn</string>
+    <string name="voucher_pause">Tạm ngưng mã</string>
+    <string name="voucher_resume">Kích hoạt lại mã</string>
+    <string name="voucher_cancel">Hủy mã</string>
+    <string name="voucher_cancel_confirm">Hủy hẳn mã %1$s? Khách sẽ không dùng được mã này nữa.</string>
+    <string name="err_days">Nhập số ngày từ 1 đến 365</string>
+    <string name="err_code_taken">Mã này đã tồn tại</string>
+    <string name="voucher_on">Đang dùng</string>
+    <string name="voucher_off">Tạm ngưng</string>
+    <string name="hint_code">Mã (chữ và số, 3–15 ký tự)</string>
+    <string name="hint_percent">Phần trăm giảm (1–90)</string>
+    <string name="hint_max_discount">Giảm tối đa (để trống = không giới hạn)</string>
+    <string name="hint_min_order">Đơn tối thiểu (để trống = không yêu cầu)</string>
+    <string name="hint_days">Số ngày hiệu lực (1–365)</string>
+    <string name="err_code">Mã chỉ gồm chữ không dấu và số, 3–15 ký tự</string>
+    <string name="err_percent">Nhập số từ 1 đến 90</string>
+    <string name="voucher_saved">Đã lưu mã giảm giá</string>
+    <string name="voucher_deleted">Đã xóa mã</string>
+
+    <!-- Hồ sơ -->
+    <string name="account_type">Loại tài khoản</string>
+    <string name="edit_profile_title">Chỉnh sửa thông tin</string>
+    <string name="not_updated">Chưa cập nhật</string>
+    <string name="profile_saved">Đã lưu thông tin</string>
+
+    <!-- Tuần 1: Máy tính, Hello -->
+    <string name="title_calculator">Máy tính</string>
+    <string name="title_main_2">Hello Android</string>
+    <string name="hello_subtitle">Bấm nút để tăng bộ đếm</string>
+    <string name="click_count_label">lần bấm</string>
+    <string name="btn_click">Bấm để đếm</string>
+    <string name="btn_hello">Chào</string>
+    <string name="hello_toast">Xin chào Android!</string>
+
+    <string-array name="sort_options">
+        <item>Gợi ý cho bạn</item>
+        <item>Gần nhất</item>
+        <item>Đánh giá cao</item>
+        <item>Giao nhanh nhất</item>
+    </string-array>
+
+    <string-array name="star_labels">
+        <item>★ Tệ</item>
+        <item>★★ Chưa ngon</item>
+        <item>★★★ Bình thường</item>
+        <item>★★★★ Ngon</item>
+        <item>★★★★★ Tuyệt vời!</item>
+    </string-array>
+    <!-- Tài khoản / Cài đặt -->
+    <string name="settings_title">Cài đặt</string>
+    <string name="section_sound">Âm thanh</string>
+    <string name="section_admin">Quản trị</string>
+    <string name="section_app">Ứng dụng</string>
+    <string name="music_switch">Nhạc nền \"Đêm Thành Phố\"</string>
+    <string name="volume">Âm lượng</string>
+    <string name="edit_profile_link">Sửa hồ sơ ›</string>
+    <string name="my_orders">Đơn mua</string>
+    <string name="view_all_orders">Xem lịch sử mua hàng ›</string>
+    <string name="step_short_0">Chuẩn bị</string>
+    <string name="step_short_1">Đang giao</string>
+    <string name="step_short_2">Đã giao</string>
+    <string name="step_short_3">Đã hủy</string>
+    <string name="btn_keep_code">Giữ mã</string>
+    <string name="voucher_no_expiry">Không thời hạn</string>
+
+    <string-array name="return_reasons">
+        <item>Món bị nguội, hỏng hoặc không đảm bảo</item>
+        <item>Giao sai món / thiếu món</item>
+        <item>Món không đúng mô tả</item>
+        <item>Giao quá lâu</item>
+        <item>Lý do khác</item>
+    </string-array>
+
+    <string-array name="spicy_levels">
+        <item>Cay nhẹ</item>
+        <item>Cay vừa</item>
+        <item>Rất cay</item>
+    </string-array>
+
+    <!-- Nền tảng phân phối: khu vực, quán, gợi ý -->
+    <string name="deliver_to">Giao đến: %1$s</string>
+    <string name="pick_area">Chọn khu vực nhận hàng</string>
+    <string name="suggest_title">Gợi ý cho bạn</string>
+    <string name="suggest_sub">Quán đánh giá cao trong khu vực bạn chọn</string>
+    <string name="nearby_title">Quán trong khu vực</string>
+    <string name="shops_empty">Không tìm thấy quán phù hợp</string>
+    <string name="shop_rating">★ %1$.1f (%2$s)</string>
+    <string name="shop_rating_full">★ %1$.1f · %2$s đánh giá</string>
+    <string name="shop_distance">%1$.1f km · ~%2$d phút</string>
+    <string name="shop_fee_from">Phí giao từ %1$s</string>
+    <string name="shop_menu">Thực đơn của quán</string>
+    <string name="shop_of">Quán: %1$s</string>
+    <string name="label_distance">Khoảng cách</string>
+    <string name="label_open_hours">Giờ mở cửa</string>
+    <string name="open_hours">20:00 – 04:00 hằng ngày</string>
+    <string name="label_ship_fee">Phí giao</string>
+    <string name="label_shop">Quán</string>
+    <string name="label_deliver_area">Giao đến</string>
+    <string name="cart_bar">%1$d phần · %2$s</string>
+    <string name="view_cart">XEM GIỎ HÀNG</string>
+    <string name="other_shop_title">Đổi sang quán khác?</string>
+    <string name="other_shop_msg">Giỏ hàng đang có món của quán khác. Mỗi đơn chỉ đặt từ 1 quán. Xóa giỏ cũ và thêm món của \"%1$s\"?</string>
+    <string name="other_shop_replace">Xóa giỏ và thêm</string>
+    <string name="shop_reviews_title">Nhận xét về quán · %1$d</string>
+    <string name="btn_write_shop_review">Viết nhận xét về quán</string>
+    <string name="shop_review_dialog_title">Nhận xét về %1$s</string>
+</resources>

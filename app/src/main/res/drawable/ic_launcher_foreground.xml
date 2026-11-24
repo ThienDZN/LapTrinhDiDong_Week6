@@ -1,0 +1,12 @@
+<!-- Tiền cảnh icon adaptive (nằm trong vùng an toàn 66dp ở giữa): trăng khuyết + tô mì bốc khói + đũa -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#F2C14E" android:pathData="M70,27a9,9 0 1,0 6,15.5a7.5,7.5 0 1,1 -6,-15.5z" />
+    <path android:strokeColor="#E6FFFFFF" android:strokeWidth="2.5" android:strokeLineCap="round"
+        android:pathData="M44,50c-3,-4 3,-6 0,-10M54,49c-3,-4 3,-6 0,-10M64,50c-3,-4 3,-6 0,-10" />
+    <path android:strokeColor="#E9C46A" android:strokeWidth="2.5" android:strokeLineCap="round"
+        android:pathData="M64,40L77,56M69,38L80,54" />
+    <path android:fillColor="#FF8A65" android:pathData="M32,56h44a22,19 0 0,1 -44,0z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M32,56h44v3h-44z" />
+    <path android:fillColor="#E76F51" android:pathData="M46,75h16v4h-16z" />
+</vector>

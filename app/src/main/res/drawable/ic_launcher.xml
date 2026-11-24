@@ -1,0 +1,27 @@
+<!-- Icon app "Midnight Bites": nền trời đêm + trăng khuyết + sao + tô mì bốc khói -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:pathData="M54,54m-54,0a54,54 0 1,1 108,0a54,54 0 1,1 -108,0">
+        <aapt:attr name="android:fillColor">
+            <gradient android:startX="54" android:startY="0" android:endX="54" android:endY="108"
+                android:startColor="#1B1446" android:centerColor="#3E2A6B" android:endColor="#D6336C" />
+        </aapt:attr>
+    </path>
+    <!-- trăng khuyết -->
+    <path android:fillColor="#F2C14E" android:pathData="M78,20a12,12 0 1,0 8,21a10,10 0 1,1 -8,-21z" />
+    <!-- sao -->
+    <path android:fillColor="#FFFFFF" android:pathData="M26,22l1.2,2.6 2.8,0.4 -2,2 0.5,2.8 -2.5,-1.4 -2.5,1.4 0.5,-2.8 -2,-2 2.8,-0.4z" />
+    <path android:fillColor="#CCFFFFFF" android:pathData="M44,14m-1.5,0a1.5,1.5 0 1,1 3,0a1.5,1.5 0 1,1 -3,0" />
+    <!-- hơi nóng -->
+    <path android:strokeColor="#CCFFFFFF" android:strokeWidth="3" android:strokeLineCap="round"
+        android:pathData="M42,44c-4,-5 4,-8 0,-13M54,42c-4,-5 4,-8 0,-13M66,44c-4,-5 4,-8 0,-13" />
+    <!-- đũa -->
+    <path android:strokeColor="#E9C46A" android:strokeWidth="3" android:strokeLineCap="round"
+        android:pathData="M70,30L84,52M76,28L88,50" />
+    <!-- tô -->
+    <path android:fillColor="#FF8A65" android:pathData="M24,54h60a30,26 0 0,1 -60,0z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M24,54h60v4h-60z" />
+    <path android:fillColor="#E76F51" android:pathData="M42,82h24v5h-24z" />
+</vector>

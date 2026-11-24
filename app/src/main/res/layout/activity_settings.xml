@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Màn hình CÀI ĐẶT (cấu hình app): nhạc nền + âm lượng, quản trị (chỉ admin), giới thiệu, bài tập tuần 1 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationContentDescription="@string/cd_back"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/settings_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- Âm thanh -->
+            <TextView style="@style/DetailSection" android:layout_marginTop="4dp" android:text="@string/section_sound" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/FormCard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/swMusic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/music_switch"
+                        android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/volume"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="?attr/colorOnSurfaceVariant" />
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/sliderVolume"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:stepSize="5"
+                            android:valueFrom="0"
+                            android:valueTo="100" />
+
+                        <TextView
+                            android:id="@+id/tvVolume"
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:textAppearance="?attr/textAppearanceLabelLarge"
+                            android:textColor="?attr/colorOnSurface" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Quản trị (chỉ admin) -->
+            <TextView android:id="@+id/tvAdminSection" style="@style/DetailSection" android:text="@string/section_admin" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAdmin"
+                style="@style/FormCard"
+                app:contentPadding="0dp">
+
+                <TextView android:id="@+id/rowAdmin" style="@style/MenuRow"
+                    android:text="@string/nav_admin" app:drawableStartCompat="@drawable/ic_admin" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Ứng dụng -->
+            <TextView style="@style/DetailSection" android:text="@string/section_app" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/FormCard"
+                app:contentPadding="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView android:id="@+id/rowAbout" style="@style/MenuRow"
+                        android:text="@string/nav_about" app:drawableStartCompat="@drawable/ic_info" />
+                    <TextView android:id="@+id/rowCalculator" style="@style/MenuRow"
+                        android:text="@string/btn_open_calculator" app:drawableStartCompat="@drawable/ic_calculate" />
+                    <TextView android:id="@+id/rowHello" style="@style/MenuRow"
+                        android:text="@string/btn_open_hello" app:drawableStartCompat="@drawable/ic_touch" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Kết nối Firestore -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Thien">
+
+        <!-- Màn hình mở đầu tiên: LOGIN -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Màn hình ĐĂNG KÝ: mở từ Login -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <!-- Màn hình HOME: chỉ mở từ Login -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- Màn hình THÔNG TIN CÁ NHÂN: mở từ menu trượt -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
+        <!-- Trang QUÁN (thực đơn của quán) + CHI TIẾT MÓN -->
+        <activity android:name=".ShopActivity" android:exported="false" />
+        <activity android:name=".FoodActivity" android:exported="false" />
+
+        <!-- Giỏ hàng -> Thanh toán -->
+        <activity android:name=".CartActivity" android:exported="false" />
+        <activity android:name=".CheckoutActivity" android:exported="false" />
+
+        <!-- Lịch sử đơn hàng + chi tiết đơn -->
+        <activity android:name=".OrdersActivity" android:exported="false" />
+        <activity android:name=".OrderDetailActivity" android:exported="false" />
+
+        <!-- Món đã thích, Admin quản lý mã giảm giá -->
+        <activity android:name=".FavoritesActivity" android:exported="false" />
+        <activity android:name=".AdminVoucherActivity" android:exported="false" />
+
+        <!-- Tài khoản (đơn mua theo trạng thái) + Cài đặt (nhạc nền, âm lượng, quản trị) -->
+        <activity android:name=".AccountActivity" android:exported="false" />
+        <activity android:name=".SettingsActivity" android:exported="false" />
+
+        <!-- Tuần 1 - Bài 6: máy tính, mở từ Home -->
+        <activity
+            android:name=".CalculatorActivity"
+            android:exported="false" />
+
+        <!-- Tuần 1 - Bài 4: đếm số lần bấm, mở từ Home -->
+        <activity
+            android:name=".HelloActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

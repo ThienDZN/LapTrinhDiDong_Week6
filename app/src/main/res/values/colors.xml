@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Bảng màu "sân khấu": nền tối, cam san hô + vàng đèn + tím ===== -->
+    <color name="md_primary">#FF8A65</color>
+    <color name="md_on_primary">#3A0B00</color>
+    <color name="md_primary_container">#5C2A1C</color>
+    <color name="md_on_primary_container">#FFDBD0</color>
+
+    <color name="md_secondary">#FFB74D</color>
+    <color name="md_on_secondary">#3B1F00</color>
+    <color name="md_secondary_container">#4D2A0F</color>
+    <color name="md_on_secondary_container">#FFDDB8</color>
+
+    <color name="md_tertiary">#B39DDB</color>
+    <color name="md_on_tertiary">#2A1458</color>
+    <color name="md_tertiary_container">#3E2A6B</color>
+    <color name="md_on_tertiary_container">#EADDFF</color>
+
+    <color name="md_error">#FFB4AB</color>
+    <color name="md_on_error">#690005</color>
+    <color name="md_error_container">#93000A</color>
+    <color name="md_on_error_container">#FFDAD6</color>
+
+    <color name="md_surface">#121016</color>
+    <color name="md_on_surface">#ECE6F0</color>
+    <color name="md_surface_variant">#2E2A36</color>
+    <color name="md_on_surface_variant">#CAC4D0</color>
+    <color name="md_outline">#938F99</color>
+    <color name="md_outline_variant">#49454F</color>
+
+    <color name="md_surface_container_lowest">#0D0B10</color>
+    <color name="md_surface_container_low">#1A171F</color>
+    <color name="md_surface_container">#1F1B24</color>
+    <color name="md_surface_container_high">#2A2530</color>
+    <color name="md_surface_container_highest">#35303B</color>
+    <color name="md_surface_dim">#121016</color>
+    <color name="md_surface_bright">#38333D</color>
+
+    <color name="md_inverse_surface">#ECE6F0</color>
+    <color name="md_inverse_on_surface">#2F2B34</color>
+    <color name="md_inverse_primary">#A63E1F</color>
+
+    <!-- Giá tiền -->
+    <color name="price">#FFB74D</color>
+    <color name="price_bg">#3D2A12</color>
+
+    <!-- Màu bìa album (chọn theo id album) -->
+    <color name="cover_1">#E76F51</color>
+    <color name="cover_2">#2A9D8F</color>
+    <color name="cover_3">#7B2CBF</color>
+    <color name="cover_4">#E9C46A</color>
+    <color name="cover_5">#264653</color>
+    <color name="cover_6">#D62828</color>
+</resources>

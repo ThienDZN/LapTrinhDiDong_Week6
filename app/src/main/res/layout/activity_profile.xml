@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Màn hình THÔNG TIN CÁ NHÂN - Material 3 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- Top app bar: quay lại + tiêu đề + nút sửa -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationContentDescription="@string/cd_back"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/nav_profile">
+
+        <Button
+            android:id="@+id/btnEditProfile"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="@string/cd_edit"
+            app:icon="@drawable/ic_edit"
+            app:iconTint="?attr/colorOnSurfaceVariant" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Avatar + tên -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tvProfileAvatar"
+                    style="@style/Widget.App.Avatar"
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:textAppearance="?attr/textAppearanceDisplaySmall" />
+
+                <TextView
+                    android:id="@+id/tvProfileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/DetailChip"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/member"
+                    app:chipIcon="@drawable/ic_star"
+                    app:chipIconTint="@null" />
+            </LinearLayout>
+
+            <!-- Danh sách thông tin: mỗi dòng = icon + nhãn + giá trị -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="?attr/colorSurfaceContainerLow"
+                app:cardCornerRadius="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp">
+
+                    <LinearLayout style="@style/ProfileRow">
+                        <ImageView style="@style/ProfileRowIcon" android:src="@drawable/ic_person" />
+                        <LinearLayout style="@style/ProfileRowText">
+                            <TextView style="@style/ProfileRowLabel" android:text="@string/hint_fullname" />
+                            <TextView android:id="@+id/tvProfileFullName" style="@style/ProfileRowValue" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/ProfileRow">
+                        <ImageView style="@style/ProfileRowIcon" android:src="@drawable/ic_account" />
+                        <LinearLayout style="@style/ProfileRowText">
+                            <TextView style="@style/ProfileRowLabel" android:text="@string/hint_username" />
+                            <TextView android:id="@+id/tvProfileAccount" style="@style/ProfileRowValue" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/ProfileRow">
+                        <ImageView style="@style/ProfileRowIcon" android:src="@drawable/ic_email" />
+                        <LinearLayout style="@style/ProfileRowText">
+                            <TextView style="@style/ProfileRowLabel" android:text="@string/hint_email" />
+                            <TextView android:id="@+id/tvProfileEmail" style="@style/ProfileRowValue" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/ProfileRow">
+                        <ImageView style="@style/ProfileRowIcon" android:src="@drawable/ic_phone" />
+                        <LinearLayout style="@style/ProfileRowText">
+                            <TextView style="@style/ProfileRowLabel" android:text="@string/hint_phone" />
+                            <TextView android:id="@+id/tvProfilePhone" style="@style/ProfileRowValue" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/ProfileRow">
+                        <ImageView style="@style/ProfileRowIcon" android:src="@drawable/ic_lock" />
+                        <LinearLayout style="@style/ProfileRowText">
+                            <TextView style="@style/ProfileRowLabel" android:text="@string/account_type" />
+                            <TextView android:id="@+id/tvProfileRole" style="@style/ProfileRowValue" android:text="@string/member" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
